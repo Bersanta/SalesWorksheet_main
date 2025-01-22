@@ -1,0 +1,51 @@
+{
+  "id": "3f0ce462-9d94-4334-8465-c98011308bb0",
+  "name": "Sales and Purchase Worksheets",
+  "publisher": "Rapha",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "19df7fc9-097e-4bcd-8dba-0bee0ec6b513",
+      "name": "nHanced Base (SaaS)",
+      "version": "1.0.0.0",
+      "publisher": "The 365 People"
+    },
+    {
+      "id": "f2501d6b-b88e-4f6b-8f27-071873ce0023",
+      "name": "LS Central Accelerator - SaaS",
+      "version": "1.0.0.0",
+      "publisher": "The 365 People"
+    },
+    {
+      "id": "e08ae64f-a262-45f5-893d-8760ef35a403",
+      "name": "API Framework",
+      "version": "1.0.0.0",
+      "publisher": "Rapha"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "25.0.0.0",
+  "idRanges": [
+    {
+      "from": 80437,
+      "to": 80450
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "14.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

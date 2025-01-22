@@ -1,0 +1,50 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Rapha_UAT",
+            "startupObjectId": 31,
+            "startupObjectType": "Page",
+            "breakOnError": false,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "0505554a-0bbc-4a82-829b-713f4c33d522",
+            "environmentType": "Sandbox",
+            "environmentName": "UAT",
+            "schemaUpdateMode": "ForceSync"
+        },
+        {
+            "name": "DevB",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "DevB",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "0505554a-0bbc-4a82-829b-713f4c33d522",
+            "schemaUpdateMode": "ForceSync"
+        },
+        {
+            "name": "DevP",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "DevP",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "tenant": "0505554a-0bbc-4a82-829b-713f4c33d522",
+            "schemaUpdateMode": "ForceSync"
+        }
+    ]
+}
