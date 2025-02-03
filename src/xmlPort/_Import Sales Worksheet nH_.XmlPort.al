@@ -28,7 +28,8 @@ xmlport 80438 "Import Sales Worksheet nH"
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(OrderType; dsalesworksheetline."Order Type")
+                fieldattribute(OrderType;
+                dsalesworksheetline."Order Type")
                 {
                     FieldValidate = yes;
                 }
@@ -113,31 +114,38 @@ xmlport 80438 "Import Sales Worksheet nH"
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(ShipToCity; dsalesworksheetline."Ship-to City")
+                fieldattribute(ShipToCity;
+                dsalesworksheetline."Ship-to City")
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(ShipToPostCode; dsalesworksheetline."Ship-to PostCode")
+                fieldattribute(ShipToPostCode;
+                dsalesworksheetline."Ship-to PostCode")
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(ShiptoCountry; dsalesworksheetline."Ship-to Country")
+                fieldattribute(ShiptoCountry;
+                dsalesworksheetline."Ship-to Country")
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(ShiptoCounty; dsalesworksheetline."Ship-to County")
+                fieldattribute(ShiptoCounty;
+                dsalesworksheetline."Ship-to County")
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(ShipToPhoneNo; dsalesworksheetline."Ship-to Phone No.")
+                fieldattribute(ShipToPhoneNo;
+                dsalesworksheetline."Ship-to Phone No.")
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(ShipToEmail; dsalesworksheetline."Ship-to E-mail")
+                fieldattribute(ShipToEmail;
+                dsalesworksheetline."Ship-to E-mail")
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(SalespersonCode; dsalesworksheetline."Salesperson Code")
+                fieldattribute(SalespersonCode;
+                dsalesworksheetline."Salesperson Code")
                 {
                     FieldValidate = yes;
                 }
@@ -190,12 +198,23 @@ xmlport 80438 "Import Sales Worksheet nH"
                 {
                     FieldValidate = yes;
                 }
-                fieldattribute(LineDiscount; dsalesworksheetline."Line Discount")
+                fieldattribute(LineDiscount;
+                dsalesworksheetline."Line Discount")
                 {
                     FieldValidate = yes;
                 }
                 fieldattribute(SplitBy;
                 dSalesWorksheetLine."Split By")
+                {
+                    FieldValidate = yes;
+                }
+                fieldattribute(TotalAmount;
+                dSalesWorksheetLine."Total Amount")
+                {
+                    FieldValidate = yes;
+                }
+                fieldattribute(TotalAmountInclVAT;
+                dSalesWorksheetLine."Total Amount Incl. VAT")
                 {
                     FieldValidate = yes;
                 }
@@ -241,16 +260,6 @@ xmlport 80438 "Import Sales Worksheet nH"
                 }
                 fieldattribute(YourReference;
                 dSalesWorksheetLine."Your Reference")
-                {
-                    FieldValidate = yes;
-                }
-                fieldattribute(TotalAmount;
-                dSalesWorksheetLine."Total Amount")
-                {
-                    FieldValidate = yes;
-                }
-                fieldattribute(TotalAmountInclVAT;
-                dSalesWorksheetLine."Total Amount Incl. VAT")
                 {
                     FieldValidate = yes;
                 }

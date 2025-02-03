@@ -345,6 +345,9 @@ codeunit 80441 "Create Sales Wksh. Docs nH"
         DimensionNo: Integer;
         DimensionCode: Code[20];
         Handled: Boolean;
+        Currency: Record Currency;
+        GeneralLedgerSetup: record "General Ledger Setup";
+
     begin
         Handled := false;
         OnBeforeCreateSalesHeader(SalesWorksheetLine, SalesHeader, Handled);
@@ -364,7 +367,7 @@ codeunit 80441 "Create Sales Wksh. Docs nH"
             SalesHeader.VALIDATE("External Document No.", SalesWorksheetLine."External Document No.");
             SalesHeader.Validate("Order Season Type_rph", SalesWorksheetLine."Order Season Type".AsInteger());
             SalesHeader.Validate("Order Season Code_rph", SalesWorksheetLine."Order Season Code");
-            SalesHeader.Validate("Delivery Information TNP", SalesWorksheetLine."Delivery Information");
+            SalesHeader.Validate("Shipping Comments", SalesWorksheetLine."Delivery Information");
             SalesHeader.Validate("Shipping Agent Code", SalesWorksheetLine."Shipping Agent");
             SalesHeader.Validate("Shipping Agent Service Code", SalesWorksheetLine."Shipping Agent Service");
             SalesHeader.Validate("Ship-to Contact", SalesWorksheetLine."Ship-to Contact");
@@ -378,7 +381,13 @@ codeunit 80441 "Create Sales Wksh. Docs nH"
             SalesHeader.Validate("Ship-to Phone No.", SalesWorksheetLine."Ship-to Phone No.");
             SalesHeader.Validate("Ship-to E-Mail TNP", SalesWorksheetLine."Ship-to E-mail");
             SalesHeader.Validate("Salesperson Code", SalesWorksheetLine."Salesperson Code");
-            SalesHeader.VALIDATE("Currency Code", SalesWorksheetLine."Currency Code");
+
+            if GeneralLedgerSetup.Get then
+                if SalesWorksheetLine."Currency Code" = GeneralLedgerSetup."LCY Code" then
+                    SalesHeader.Validate("Currency Code", '')
+                else
+                    SalesHeader.Validate("Currency Code", SalesWorksheetLine."Currency Code");
+
             if (SalesWorksheetLine."Posting Description" <> '') then SalesHeader.VALIDATE("Posting Description", SalesWorksheetLine."Posting Description");
             SalesHeader.VALIDATE("Shipment Method Code", SalesWorksheetLine."Shipment Method Code");
             SalesHeader.VALIDATE("Shortcut Dimension 1 Code", SalesWorksheetLine."Dimension 1 Code");

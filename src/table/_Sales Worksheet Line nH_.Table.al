@@ -98,8 +98,9 @@ table 80444 "Sales Worksheet Line nH"
             Caption = 'Order Season Code';
             DataClassification = ToBeClassified;
         }
-        field(48; "Delivery Information"; Blob)
+        field(48; "Delivery Information"; Text[100])
         {
+            Caption = 'Delivery Information';
             DataClassification = ToBeClassified;
         }
 

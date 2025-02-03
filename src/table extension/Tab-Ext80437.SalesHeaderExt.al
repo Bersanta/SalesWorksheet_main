@@ -16,5 +16,10 @@ tableextension 80437 "Sales Header Ext_rph." extends "Sales Header"
             Caption = 'Order Season Code';
             DataClassification = ToBeClassified;
         }
+        field(80439; "Shipping Comments"; Text[100])
+        {
+            Caption = 'Shipping Comments';
+            DataClassification = ToBeClassified;
+        }
     }
 }
